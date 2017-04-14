@@ -1,0 +1,14 @@
+<% if @users.any? %>
+<div class="row">
+  <div class="col-xs-12 col-sm-offset-2 col-sm-8  col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6">
+    <ul class="list-group">
+      <% users.each do |user| %>
+        <li class="list-group-item">
+          <%= user.name %>
+        </li>
+      <% end %>
+    </ul>
+    <%= paginate users %>
+  </div>
+</div>
+<% end %>
